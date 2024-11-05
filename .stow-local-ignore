@@ -3,3 +3,4 @@ home.nix
 flake.nix
 flake.lock
 hardware-configuration.nix
+.git
