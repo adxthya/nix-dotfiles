@@ -9,8 +9,10 @@
   home.packages = with pkgs;[
     zsh
     stow
+    slurp
+    grim
   ];
- 
+
   # Zsh Config
   programs.zsh.enable = true;
   programs.zsh = {
@@ -43,7 +45,6 @@
     };
   };
 
-  # Gtk Config
 
   home.file = {
   };
