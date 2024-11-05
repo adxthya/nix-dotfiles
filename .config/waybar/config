@@ -1,0 +1,75 @@
+{
+  "layer": "top",
+  "height": 30,
+  "spacing": 5,
+  // Choose the order of the modules
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "tray",
+    "custom/pacman",
+    "pulseaudio",
+    "network",
+    "battery",
+    "clock",
+    "custom/power"
+  ],
+  "hyprland/window": {
+    "separate-outputs": true
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate"
+  },
+  "tray": {
+    // "icon-size": 21,
+    "spacing": 10
+  },
+  "custom/pacman": {
+    "interval": 3600,
+    "return-type": "json",
+    "exec": "pacman-updates",
+    "exec-if": "exit 0",
+    "on-click": "$TERMINAL -e paru; pkill -SIGRTMIN+8 waybar",
+    "signal": 8
+  },
+  "clock": {
+    "tooltip-format": "{:%A, %B %d, %Y}",
+    "format": "{:%I:%M}"
+  },
+  "battery": {
+    "states": {
+      "warning": 40
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-charging": "󰂄",
+    "format-warning": "󰂃",
+    "tooltip-format": "{capacity}%"
+  },
+  "network": {
+    "format-wifi": "󰤨",
+    "format-ethernet": "",    
+    "format-disconnected": "",
+    "tooltip-format": "Connected to {essid}",
+    "tooltip-format-ethernet": "{ifname} ",
+    "on-click": "hyprctl dispatch exec '[float]' '$TERMINAL -e nmtui'"
+  },
+  "pulseaudio": {
+    "scroll-step": 5, // %, can be a float
+    "format": "{icon}",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "default": ["", "", "󰕾"]
+    },
+    "tooltip-format": "{volume}% volume",
+    "on-click": "pavucontrol"
+  },
+  "custom/power": {
+    "format": "󰐥",
+    "on-click": "~/.config/rofi/scripts/powermenu_t2"
+  }
+}
+
+// vim: ft=jsonc
