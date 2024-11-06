@@ -19,7 +19,7 @@
         hope = nixpkgs.lib.nixosSystem{
           specialArgs = { inherit inputs system; };
           modules = [
-            ./configuration.nix
+            ./host
           ];
         };
       };
