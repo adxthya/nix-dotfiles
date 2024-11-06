@@ -2,8 +2,11 @@
 
   gtk = {
     enable = true;    
-    theme.package = pkgs.adw-gtk3;
-    theme.name = "adw-gtk3";
+    theme.package = (pkgs.graphite-gtk-theme.override {
+      tweaks = [ "nord" ] ;
+      colorVariants = [ "dark" ];
+    });
+    theme.name = "Graphite-Dark-nord";
   };
 
 }
