@@ -57,6 +57,11 @@
 
   # Enable blueman[bluetooth-gui]
   services.blueman.enable = true;
+  
+  # Mount Devices
+  services.devmon.enable = true;
+  services.gvfs.enable = true; 
+  services.udisks2.enable = true;
 
   # Keyring
   services.gnome.gnome-keyring.enable = true;

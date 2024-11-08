@@ -16,9 +16,9 @@
     ];
     shellAliases = {
       c="clear";
-      config="sudo nano ~/dotfiles/configuration.nix";
+      config="sudo nano ~/dotfiles/host/configuration.nix";
       build="sudo nixos-rebuild switch --flake ~/dotfiles/";
-      home="nano ~/dotfiles/home.nix";
+      home="nano ~/dotfiles/users/adxthya/home.nix";
       home-build="home-manager switch --flake ~/dotfiles/";
     };
     oh-my-zsh = {
