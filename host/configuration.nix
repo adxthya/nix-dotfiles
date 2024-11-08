@@ -49,6 +49,9 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   
+  # Enable Flatpaks
+  services.flatpak.enable = true;
+
   # Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
