@@ -15,6 +15,8 @@
     stow
     slurp
     grim
+    obsidian
+    vlc
   ];
 
 

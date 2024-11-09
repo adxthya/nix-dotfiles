@@ -200,8 +200,6 @@
     glib
     gparted
     brightnessctl
-    nwg-look
-    sassc
     nodejs_22
     zsh
     home-manager
