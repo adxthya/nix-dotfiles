@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home.username = "adxthya";
@@ -17,6 +17,7 @@
     grim
     obsidian
     vlc
+    inputs.zen-browser.packages."${system}".default
   ];
 
 

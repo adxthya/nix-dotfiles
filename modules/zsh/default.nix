@@ -20,6 +20,7 @@
       build="sudo nixos-rebuild switch --flake ~/dotfiles/";
       home="nano ~/dotfiles/users/adxthya/home.nix";
       home-build="home-manager switch --flake ~/dotfiles/";
+      ns="nix-shell -p";
     };
     oh-my-zsh = {
       enable = true;
