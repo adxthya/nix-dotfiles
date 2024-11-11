@@ -68,6 +68,7 @@
 
   # Keyring
   services.gnome.gnome-keyring.enable = true;
+  security.pam.services.sddm.enableGnomeKeyring = true;
 
   # Polkit
   security.polkit = {
@@ -87,17 +88,24 @@
   users.defaultUserShell = pkgs.zsh;
 
   # Enable Hyprland
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
+  # programs.hyprland = {
+  #  enable = true;
+  #  xwayland.enable = true;
+  #};
 
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-    theme = "catppuccin-mocha";
-    package = pkgs.kdePackages.sddm;
-  };
+  # services.displayManager.sddm = {
+  # enable = true;
+  # wayland.enable = true;
+  # theme = "catppuccin-mocha";
+  # package = pkgs.kdePackages.sddm;
+  # };
+  
+  # Budgie
+  services.xserver.desktopManager.budgie.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
+  environment.budgie.excludePackages = with pkgs; [
+    cinnamon.nemo
+  ];  
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
@@ -200,8 +208,8 @@
     glib
     gparted
     brightnessctl
-    nodejs_22
     zsh
+    nodejs_22
     home-manager
     (
       pkgs.catppuccin-sddm.override {
@@ -228,8 +236,8 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 5500 3000 ];
-  networking.firewall.allowedUDPPorts = [ 5500 3000 ];
+  networking.firewall.allowedTCPPorts = [ 5500 3000 25565 19132 ];
+  networking.firewall.allowedUDPPorts = [ 5500 3000 25565 19132 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
