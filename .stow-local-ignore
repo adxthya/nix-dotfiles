@@ -3,4 +3,7 @@ home.nix
 flake.nix
 flake.lock
 hardware-configuration.nix
+host
+modules
+users
 .git

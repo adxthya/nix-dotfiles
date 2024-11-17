@@ -20,4 +20,10 @@
   home.pointerCursor.package = pkgs.rose-pine-cursor;
   home.pointerCursor.name = "BreezeX-RosePineDawn-Linux";
   home.pointerCursor.size = 24;
+  # configure dconf to prefer dark-theme
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+       color-scheme = "prefer-dark";
+     };
+  };
 }
