@@ -3,11 +3,8 @@
   gtk = {
     enable = true;    
     # gtk theme
-    theme.package = (pkgs.graphite-gtk-theme.override {
-      tweaks = [ "nord" ] ;
-      colorVariants = [ "dark" ];
-    });
-    theme.name = "Graphite-Dark-nord";
+    theme.package = pkgs.dracula-theme;
+    theme.name = "Dracula";
     # gtk icon theme
     iconTheme.package = pkgs.dracula-icon-theme;
     iconTheme.name = "Dracula";

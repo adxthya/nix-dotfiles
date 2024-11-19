@@ -17,6 +17,7 @@
     grim
     obsidian
     vlc
+    discord
     inputs.zen-browser.packages."${system}".default
     unstable.hyprgui
   ];
