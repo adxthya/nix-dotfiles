@@ -11,13 +11,13 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = false;
+  # boot.loader.systemd-boot.enable = true;
   boot.loader.grub.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.useOSProber = true;
   boot.loader.grub.efiSupport = true;  
   boot.loader.grub.device = "nodev";  
-
+  boot.loader.timeout = -1;
   networking.hostName = "hope"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -88,25 +88,18 @@
   users.defaultUserShell = pkgs.zsh;
 
   # Enable Hyprland
-  # programs.hyprland = {
-  #  enable = true;
-  #  xwayland.enable = true;
-  #};
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
 
-  # services.displayManager.sddm = {
-  # enable = true;
-  # wayland.enable = true;
-  # theme = "catppuccin-mocha";
-  # package = pkgs.kdePackages.sddm;
-  # };
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    theme = "catppuccin-mocha";
+    package = pkgs.kdePackages.sddm;
+  };
   
-  # Budgie
-  services.xserver.desktopManager.budgie.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
-  environment.budgie.excludePackages = with pkgs; [
-    cinnamon.nemo
-  ];  
-
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
@@ -211,6 +204,7 @@
     zsh
     nodejs_22
     home-manager
+    wlogout
     (
       pkgs.catppuccin-sddm.override {
       flavor = "mocha";

@@ -68,7 +68,7 @@
   },
   "custom/power": {
     "format": "󰐥",
-    "on-click": "~/.config/rofi/scripts/powermenu_t2"
+    "on-click": "wlogout"
   }
 }
 
