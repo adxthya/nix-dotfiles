@@ -3,6 +3,8 @@
   imports = [
     ./zsh
     ./gtk
+    ./qt
+    ./dunst
   ];
 
 }
