@@ -187,6 +187,7 @@
     nodejs_22
     home-manager
     wlogout
+    hyprlock
     (
       pkgs.catppuccin-sddm.override {
       flavor = "mocha";

@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, unstable, ... }:
 
 {
   home.username = "adxthya";
@@ -18,6 +18,7 @@
     obsidian
     vlc
     inputs.zen-browser.packages."${system}".default
+    unstable.hyprgui
   ];
 
 
