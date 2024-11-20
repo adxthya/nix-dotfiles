@@ -24,7 +24,8 @@
     };
     oh-my-zsh = {
       enable = true;
-      theme="robbyrussell";
+      theme="nix";
+      custom="/home/adxthya/dotfiles/modules/zsh/custom";
       plugins = [
         "git"
         "sudo"
