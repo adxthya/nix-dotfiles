@@ -7,8 +7,7 @@
   "modules-center": ["user"],
   "modules-right": [
     "tray",
-    "custom/pacman",
-    "custom/nix-updates",
+    "power-profiles-daemon",
     "pulseaudio",
     "network",
     "battery",
@@ -51,14 +50,6 @@
     // "icon-size": 21,
     "spacing": 10
   },
-  "custom/pacman": {
-    "interval": 3600,
-    "return-type": "json",
-    "exec": "pacman-updates",
-    "exec-if": "exit 0",
-    "on-click": "$TERMINAL -e paru; pkill -SIGRTMIN+8 waybar",
-    "signal": 8
-  },
   "clock": {
     "tooltip-format": "{:%A, %B %d, %Y}",
     "format": "{:%I:%M}"
@@ -95,16 +86,15 @@
     "format": "󰐥",
     "on-click": "wlogout"
   },
-  "custom/nix-updates": {
-    "exec": "/home/adxthya/dotfiles/.config/waybar/modules/nixos-updates.sh", // <--- path to script
-    "on-click": "/home/adxthya/dotfiles/.config/waybar/modules/nixos-updates.sh && notify-send 'The system has been updated'", // refresh on click
-    "interval": 3600, // refresh every hour
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
-    "return-type": "json",
-    "format": "{} {icon}",
     "format-icons": {
-      "has-updates": "", // icon when updates needed
-      "updated": "" // icon when all packages updated
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
     }
   },
   "image": {

@@ -31,6 +31,7 @@
     libnotify
     pavucontrol
     nvd
+    power-profiles-daemon
   ];
 
 

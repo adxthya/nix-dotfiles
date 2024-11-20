@@ -47,6 +47,9 @@
   
   # Enable dconf 
   programs.dconf.enable = true;
+  
+  # Enable power-profile-daemon
+  services.power-profiles-daemon.enable = true;
 
   # Enable blueman[bluetooth-gui]
   services.blueman.enable = true;
@@ -182,6 +185,7 @@
     home-manager
     wlogout
     hyprlock
+    power-profiles-daemon
     (
       pkgs.catppuccin-sddm.override {
       flavor = "mocha";
