@@ -1,13 +1,14 @@
 {
   "layer": "top",
-  "height": 30,
+  "height": 32,
   "spacing": 5,
   // Choose the order of the modules
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
+  "modules-left": ["image", "hyprland/workspaces"],
+  "modules-center": ["user"],
   "modules-right": [
     "tray",
     "custom/pacman",
+    "custom/nix-updates",
     "pulseaudio",
     "network",
     "battery",
@@ -15,12 +16,36 @@
     "custom/power"
   ],
   "hyprland/window": {
-    "separate-outputs": true
+    "separate-outputs": false
   },
   "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "on-click": "activate"
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "urgent": "",
+      "active": "",
+      "default": ""
+    },
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    }
+  },
+  "user": {
+    "format": "  adxthya (up {work_M} mins ↑)",
+    "interval": 60,
+    "height": 23,
+    "width": 23,
+    "icon": true,
+    "avatar": "/home/adxthya/icon/pfp-circle.png"
   },
   "tray": {
     // "icon-size": 21,
@@ -50,7 +75,7 @@
   },
   "network": {
     "format-wifi": "󰤨",
-    "format-ethernet": "",    
+    "format-ethernet": "",
     "format-disconnected": "",
     "tooltip-format": "Connected to {essid}",
     "tooltip-format-ethernet": "{ifname} ",
@@ -69,6 +94,24 @@
   "custom/power": {
     "format": "󰐥",
     "on-click": "wlogout"
+  },
+  "custom/nix-updates": {
+    "exec": "/home/adxthya/dotfiles/.config/waybar/modules/nixos-updates.sh", // <--- path to script
+    "on-click": "/home/adxthya/dotfiles/.config/waybar/modules/nixos-updates.sh && notify-send 'The system has been updated'", // refresh on click
+    "interval": 3600, // refresh every hour
+    "tooltip": true,
+    "return-type": "json",
+    "format": "{} {icon}",
+    "format-icons": {
+      "has-updates": "", // icon when updates needed
+      "updated": "" // icon when all packages updated
+    }
+  },
+  "image": {
+    "path": "/home/adxthya/.config/waybar/nix.svg",
+    "size": 20,
+    "interval": 5,
+    "on-click": "firefox https://search.nixos.org/packages"
   }
 }
 

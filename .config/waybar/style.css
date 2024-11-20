@@ -37,7 +37,7 @@
 
 window#waybar {
   background-color: @crust;
-  color: @text;
+  color: @sapphire;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -85,7 +85,7 @@ button {
 #workspaces button {
   padding: 0 5px;
   color: @surface2;
-  margin: 4px 0 4px 6px;
+  margin: 4px 0 4px 0;
   transition: color 200ms ease-in-out;
 }
 
@@ -99,6 +99,10 @@ button {
 
 #workspaces button.urgent {
   color: @red;
+}
+
+#image {
+  margin: 4px 0 4px 10px;
 }
 
 #clock,
@@ -185,6 +189,10 @@ button {
 
 #scratchpad.empty {
   background-color: transparent;
+}
+
+#custom-nix-updates {
+  margin-right: 8px;
 }
 
 /* vim: ft=sass */
