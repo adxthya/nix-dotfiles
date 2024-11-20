@@ -93,6 +93,8 @@
   
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
+    QT_QPA_PLATFORMTHEME = "wayland";
+    QT_SCALE_FACTOR_ROUNDING_POLICY="RoundPreferFloor";
   };
 
   hardware.opengl = {
@@ -120,7 +122,8 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    (nerdfonts.override { fonts = [ "FiraCode" "IntelOneMono" ]; })
+    cantarell-fonts
   ];
 
   # Configure keymap in X11
@@ -163,14 +166,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    waybar
-    dunst
-    libnotify
-    swww
     kitty
-    rofi-wayland
-    vscode
-    gnome.seahorse
     pavucontrol
     git
     gh
@@ -178,13 +174,11 @@
     networkmanagerapplet
     bluez
     glibc
-    pywal
     lxqt.lxqt-policykit
     glib
     gparted
     brightnessctl
     zsh
-    nodejs_22
     home-manager
     wlogout
     hyprlock
