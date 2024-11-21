@@ -18,8 +18,6 @@
     obsidian
     vlc
     discord
-    inputs.zen-browser.packages."${system}".default
-    unstable.hyprgui
     hyperfine
     unstable.qutebrowser
     swww
@@ -30,8 +28,8 @@
     pywal
     libnotify
     pavucontrol
-    nvd
     power-profiles-daemon
+    nodejs_22
   ];
 
 
