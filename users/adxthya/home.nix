@@ -30,6 +30,10 @@
     pavucontrol
     power-profiles-daemon
     nodejs_22
+    go
+    neovim
+    zig # neovim compiler
+    fzf
   ];
 
 

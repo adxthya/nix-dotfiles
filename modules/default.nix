@@ -5,6 +5,7 @@
     ./gtk
     ./qt
     ./dunst
+    ./rofi
   ];
 
 }

@@ -22,6 +22,12 @@
       home-build="home-manager switch --flake ~/dotfiles/";
       ns="nix-shell -p";
     };
+    initExtra = ''
+      source <(fzf --zsh)
+    '';
+    envExtra = ''
+      export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --border"
+    '';
     oh-my-zsh = {
       enable = true;
       theme="nix";
