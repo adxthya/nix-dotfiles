@@ -22,7 +22,6 @@
     unstable.qutebrowser
     swww
     waybar
-    rofi-wayland
     vscode
     gnome.seahorse
     pywal
