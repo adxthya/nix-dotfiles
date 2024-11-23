@@ -47,6 +47,14 @@
   
   # Enable dconf 
   programs.dconf.enable = true;
+
+  # Enable nh
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/home/adxthya/dotfiles";
+  };
   
   # Enable power-profile-daemon
   services.power-profiles-daemon.enable = true;
@@ -173,6 +181,7 @@
     kitty
     pavucontrol
     git
+    nh
     gh
     xfce.thunar
     networkmanagerapplet

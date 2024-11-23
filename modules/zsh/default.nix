@@ -17,10 +17,11 @@
     shellAliases = {
       c="clear";
       config="sudo nano ~/dotfiles/host/configuration.nix";
-      build="sudo nixos-rebuild switch --flake ~/dotfiles/";
+      build="nh os switch ~/dotfiles";
       home="nano ~/dotfiles/users/adxthya/home.nix";
-      home-build="home-manager switch --flake ~/dotfiles/";
+      home-build="nh home switch ~/dotfiles/";
       ns="nix-shell -p";
+      s="nh search";
     };
     initExtra = ''
       source <(fzf --zsh)

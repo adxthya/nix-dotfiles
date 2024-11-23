@@ -6,7 +6,6 @@
     ./qt
     ./dunst
     ./rofi
-    ./nix
   ];
 
 }
