@@ -17,7 +17,7 @@
     grim
     obsidian
     vlc
-    discord
+    vesktop
     hyperfine
     unstable.qutebrowser
     swww
@@ -33,6 +33,7 @@
     neovim
     zig # neovim compiler
     fzf
+    unstable.freetube
   ];
 
 

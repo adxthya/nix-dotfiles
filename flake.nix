@@ -28,7 +28,9 @@
         adxthya = home-manager.lib.homeManagerConfiguration {
           extraSpecialArgs = { inherit inputs; inherit unstable; };
           inherit pkgs;
-          modules = [ ./users ];
+          modules = [
+            ./users
+          ];
         };
       };
     };
