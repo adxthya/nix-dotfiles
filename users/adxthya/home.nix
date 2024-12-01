@@ -23,7 +23,7 @@
     swww
     waybar
     vscode
-    gnome.seahorse
+    seahorse
     pywal
     libnotify
     pavucontrol
@@ -34,6 +34,7 @@
     zig # neovim compiler
     fzf
     unstable.freetube
+    gnome-boxes
   ];
 
 

@@ -44,7 +44,11 @@
 
   # Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+ 
+  # Enable Virtualization
+  virtualisation.libvirtd.enable = true;
+  services.spice-vdagentd.enable = true; 
+
   # Enable dconf 
   programs.dconf.enable = true;
 
