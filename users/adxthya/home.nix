@@ -29,14 +29,13 @@
     pavucontrol
     power-profiles-daemon
     nodejs_22
-    go
     neovim
     zig # neovim compiler
     fzf
     unstable.freetube
-    gnome-boxes
+    syncthing
   ];
-
+  services.mpris-proxy.enable = true;
 
   home.file = {
   };
