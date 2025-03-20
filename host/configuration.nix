@@ -6,13 +6,13 @@
     [
       ./hardware-configuration.nix
     ];
+  
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+    timeout = -1;
+  };
 
-  boot.loader.grub.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.grub.useOSProber = true;
-  boot.loader.grub.efiSupport = true;  
-  boot.loader.grub.device = "nodev";  
-  boot.loader.timeout = -1;
   networking.hostName = "hope"; # Define your hostname.
 
   # Enable networking
@@ -87,11 +87,6 @@
     enableSSHSupport = true;
     pinentryPackage = pkgs.pinentry-gtk2;
   };
-
-  
-  # Enable zsh
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
 
   # Enable Hyprland
   programs.hyprland = {
@@ -213,8 +208,8 @@
 
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 5500 3000 25565 19132 ];
-  networking.firewall.allowedUDPPorts = [ 5500 3000 25565 19132 ];
+  networking.firewall.allowedTCPPorts = [ 5500 3000 ];
+  networking.firewall.allowedUDPPorts = [ 5500 3000 ];
 
   system.stateVersion = "24.05"; # JUST DON'T CHANGE.
 

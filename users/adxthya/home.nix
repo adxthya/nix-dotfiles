@@ -11,29 +11,29 @@
   ];
 
   home.packages = with pkgs;[
-    zsh
     stow
     slurp
     grim
     obsidian
     vlc
     vesktop
-    hyperfine
-    unstable.qutebrowser
     swww
     waybar
-    vscode
+    vscode-fhs
     seahorse
-    pywal
     libnotify
     pavucontrol
     power-profiles-daemon
-    nodejs_22
-    neovim
-    zig # neovim compiler
     fzf
     unstable.freetube
-    syncthing
+    firefox
+    bitwarden
+    zed-editor
+    veracrypt
+    telegram-desktop
+    protonvpn-gui
+    ghostty
+    obsidian            
   ];
   services.mpris-proxy.enable = true;
 

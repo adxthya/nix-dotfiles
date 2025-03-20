@@ -16,10 +16,10 @@
     ];
     shellAliases = {
       c="clear";
-      config="sudo nano ~/dotfiles/host/configuration.nix";
-      build="nh os switch ~/dotfiles";
-      home="nano ~/dotfiles/users/adxthya/home.nix";
-      home-build="nh home switch ~/dotfiles/";
+      config="sudo nano ~/hypr-dotfiles/host/configuration.nix";
+      build="nh os switch ~/hypr-dotfiles";
+      home="nano ~/hypr-dotfiles/users/adxthya/home.nix";
+      home-build="nh home switch ~/hypr-dotfiles/";
       ns="nix-shell -p";
       s="nh search";
     };
