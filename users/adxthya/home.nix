@@ -12,12 +12,22 @@
 
   home.packages = with pkgs;[
     stow
+   
+    # Screenshots
     slurp
     grim
+
+    #Notes
     obsidian
+
     vlc
     vesktop
+
+    # Wallpaper
     swww
+    waypaper
+
+
     waybar
     vscode-fhs
     seahorse

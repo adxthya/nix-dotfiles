@@ -39,12 +39,12 @@
     }
   },
   "user": {
-    "format": "  adxthya (up {work_M} mins ↑)",
+    "format": "  adxthya | ({work_M} mins ↑)",
     "interval": 60,
     "height": 23,
     "width": 23,
     "icon": true,
-    "avatar": "/home/adxthya/dotfiles/.config/waybar/pfp-circle.png"
+    "avatar": "/home/adxthya/.config/waybar/pfp-circle.png",
   },
   "tray": {
     // "icon-size": 21,
@@ -65,7 +65,7 @@
     "tooltip-format": "{capacity}%"
   },
   "network": {
-    "format-wifi": "󰤨",
+    "format-wifi": "{ipaddr}",
     "format-ethernet": "",
     "format-disconnected": "",
     "tooltip-format": "Connected to {essid}",
@@ -75,12 +75,12 @@
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
     "format": "{icon}",
-    "format-muted": "󰖁",
+    "format-muted": "",
     "format-icons": {
-      "default": ["", "", "󰕾"]
+      "default": ["", "", ""]
     },
     "tooltip-format": "{volume}% volume",
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
   },
   "custom/power": {
     "format": "󰐥",
@@ -101,8 +101,9 @@
     "path": "/home/adxthya/.config/waybar/nix.svg",
     "size": 20,
     "interval": 5,
-    "on-click": "firefox https://search.nixos.org/packages"
-  }
+    "on-click": "firefox https://search.nixos.org/packages",
+  },
+}
 }
 
 // vim: ft=jsonc

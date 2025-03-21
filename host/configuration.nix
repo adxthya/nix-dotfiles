@@ -73,8 +73,8 @@
 
   # Keyring
   services.gnome.gnome-keyring.enable = true;
-  security.pam.services.sddm.enableGnomeKeyring = true;
   security.pam.services.login.enableGnomeKeyring = true;
+  security.pam.services.gdm-password.enableGnomeKeyring = true;
 
   # Polkit
   security.polkit = {
@@ -95,13 +95,18 @@
   };
 
   # Enable SDDM
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-    theme = "catppuccin-mocha";
-    package = pkgs.kdePackages.sddm;
-  };
+  # services.displayManager.sddm = {
+  #  enable = true;
+  #  wayland.enable = true;
+  #  theme = "catppuccin-mocha";
+  #  package = pkgs.kdePackages.sddm;
+  # };
   
+  services.xserver.displayManager.gdm = {
+    enable = true;
+    wayland = true;
+  };
+
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     QT_QPA_PLATFORMTHEME = "wayland";
@@ -135,6 +140,7 @@
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" "IntelOneMono" ]; })
     cantarell-fonts
+    iosevka
   ];
 
   # Configure keymap in X11
@@ -190,20 +196,10 @@
     glib
     gparted
     brightnessctl
-    zsh
     home-manager
     wlogout
     hyprlock
     power-profiles-daemon
-    (
-      pkgs.catppuccin-sddm.override {
-      flavor = "mocha";
-      font  = "Noto Sans";
-      fontSize = "9";
-      # background = "${./wallpaper.png}";
-      loginBackground = false;
-      }
-    )
   ];
 
 

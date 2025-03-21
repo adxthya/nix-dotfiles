@@ -30,20 +30,22 @@
 @define-color rosewater #f5e0dc;
 
 * {
-  font-family: Cantarell, Symbols Nerd Font;
-  font-weight: bolder;
-  font-size: 14px;
+    font-family:
+        Iosevka,
+        Symbols Nerd Font;
+    font-weight: bolder;
+    font-size: 14px;
 }
 
 window#waybar {
-  background-color: @crust;
-  color: @sapphire;
-  transition-property: background-color;
-  transition-duration: 0.5s;
+    background-color: transparent;
+    color: @sapphire;
+    transition-property: background-color;
+    transition-duration: 0.5s;
 }
 
 window#waybar.hidden {
-  opacity: 0.2;
+    opacity: 0.2;
 }
 
 /*
@@ -56,53 +58,53 @@ window#waybar.solo {
 */
 
 window#waybar.termite {
-  background-color: #3f3f3f;
+    background-color: #3f3f3f;
 }
 
 window#waybar.chromium {
-  background-color: #000000;
-  border: none;
+    background-color: #000000;
+    border: none;
 }
 
 button {
-  /* Use box-shadow instead of border so the text isn't offset */
-  box-shadow: inset 0 -3px transparent;
-  /* Avoid rounded borders under each button name */
-  border: none;
-  border-radius: 0;
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 
 #workspaces button:hover {
-  color: @blue;
-  box-shadow: inherit;
-  text-shadow: inherit;
-  background: @crust;
-  border: @crust;
+    color: @blue;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: @crust;
+    border: @crust;
 }
 
 #workspaces button {
-  padding: 0 5px;
-  color: @surface2;
-  margin: 4px 0 4px 0;
-  transition: color 200ms ease-in-out;
+    padding: 0 5px;
+    color: @surface2;
+    margin: 4px 0 4px 0;
+    transition: color 200ms ease-in-out;
 }
 
 #workspaces button.selected {
-  color: @blue;
+    color: @blue;
 }
 
 #workspaces button.active {
-  color: @mauve;
+    color: @mauve;
 }
 
 #workspaces button.urgent {
-  color: @red;
+    color: @red;
 }
 
 #image {
-  margin: 4px 0 4px 10px;
+    margin: 4px 0 4px 10px;
 }
 
 #clock,
@@ -113,7 +115,6 @@ button {
 #temperature,
 #backlight,
 #network,
-#pulseaudio,
 #wireplumber,
 #custom-pacman,
 #custom-power,
@@ -122,77 +123,102 @@ button {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-  padding: 0 9px;
-  color: @text;
-  border-radius: 15px;
-  margin: 5px 0;
+    padding: 0 6px;
+    color: @text;
+    border-radius: 15px;
+    margin: 5px 0;
+}
+
+#pulseaudio {
+    padding: 0 3px;
+    padding-right: 8px;
+    color: @text;
+    border-radius: 15px;
+    margin: 5px 0;
 }
 
 #window,
 #workspaces {
-  margin: 0 4px;
+    margin: 0 4px;
 }
 
 /* If workspaces is the leftmost module, reduce left margin */
 .modules-left > widget:first-child > #workspaces {
-  margin-left: 2px;
+    margin-left: 2px;
 }
 
 #clock {
-  color: @text;
+    color: @text;
 }
 
 #custom-pacman {
-  color: @peach;
+    color: @peach;
 }
 
 #pulseaudio {
-  color: @mauve;
+    color: @mauve;
 }
 
 #pulseaudio.muted {
-  color: @surface2;
+    color: @surface2;
 }
 
 #network {
-  color: @blue;
+    color: @blue;
 }
 
 #network.disconnected {
-  color: @surface2;
+    color: @surface2;
 }
 
 #battery {
-  color: @green;
+    color: @green;
 }
 
 #battery.warning:not(.charging) {
-  color: @red;
+    color: @red;
 }
 
 #custom-power {
-  color: @maroon;
-  margin-right: 5px;
+    color: @maroon;
+    margin-right: 5px;
 }
 
 #keyboard-state > label {
-  padding: 0 5px;
+    padding: 0 5px;
 }
 
 #keyboard-state > label.locked {
-  background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 #scratchpad {
-  background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 #scratchpad.empty {
-  background-color: transparent;
+    background-color: transparent;
 }
 
-#power-profiles-daemon{
-  margin-right: 8px;
+#power-profiles-daemon {
+    margin-right: 8px;
+}
+
+.modules-left {
+    background-color: @crust;
+    border-radius: 10px;
+}
+
+.modules-center {
+    background-color: @crust;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.modules-right {
+    background-color: @crust;
+    border-radius: 10px;
+    padding: 0 10px;
 }
 
 /* vim: ft=sass */
