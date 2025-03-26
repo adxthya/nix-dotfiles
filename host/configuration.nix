@@ -6,7 +6,7 @@
     [
       ./hardware-configuration.nix
     ];
-  
+
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
@@ -38,18 +38,18 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  
+
   # Enable Flatpaks
   services.flatpak.enable = true;
 
   # Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
- 
+
   # Enable Virtualization
   virtualisation.libvirtd.enable = true;
-  services.spice-vdagentd.enable = true; 
+  services.spice-vdagentd.enable = true;
 
-  # Enable dconf 
+  # Enable dconf
   programs.dconf.enable = true;
 
   # Enable nh
@@ -59,16 +59,16 @@
     clean.extraArgs = "--keep-since 4d --keep 3";
     flake = "/home/adxthya/dotfiles";
   };
-  
+
   # Enable power-profile-daemon
   services.power-profiles-daemon.enable = true;
 
   # Enable blueman[bluetooth-gui]
   services.blueman.enable = true;
-  
+
   # Mount Devices
   services.devmon.enable = true;
-  services.gvfs.enable = true; 
+  services.gvfs.enable = true;
   services.udisks2.enable = true;
 
   # Keyring
@@ -101,7 +101,7 @@
   #  theme = "catppuccin-mocha";
   #  package = pkgs.kdePackages.sddm;
   # };
-  
+
   services.xserver.displayManager.gdm = {
     enable = true;
     wayland = true;
@@ -113,10 +113,10 @@
     QT_SCALE_FACTOR_ROUNDING_POLICY="RoundPreferFloor";
   };
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
-      intel-media-sdk  
+      intel-media-sdk
     ];
   };
 
@@ -127,7 +127,7 @@
     settings = {
       General = {
         Experimental = true;
-      };    
+      };
     };
   };
 
@@ -176,8 +176,6 @@
     packages = with pkgs; [
     ];
   };
-
-  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

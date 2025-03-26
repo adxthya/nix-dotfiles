@@ -1,5 +1,11 @@
 { config, pkgs, inputs, unstable, ... }:
 
+let
+  myPkgs = pkgs // {
+    spotube = pkgs.callPackage ../../modules/spotube/package.nix {};
+  };
+in
+
 {
   home.username = "adxthya";
   home.homeDirectory = "/home/adxthya";
@@ -10,9 +16,17 @@
     ../../modules
   ];
 
-  home.packages = with pkgs;[
+  home.packages = with myPkgs;[
+    # Terminal Youtube ;)
+    inputs.yt-x.packages."${system}".default
+    
+    # Terminal Spotify ;) 
+    ncspot   
+
     stow
-   
+    xviewer	
+    brave   
+
     # Screenshots
     slurp
     grim
@@ -27,16 +41,17 @@
     swww
     waypaper
 
+    # Audio
+    pavucontrol
+    pamixer
 
     waybar
     vscode-fhs
     seahorse
     libnotify
-    pavucontrol
     power-profiles-daemon
     fzf
     unstable.freetube
-    firefox
     bitwarden
     zed-editor
     veracrypt

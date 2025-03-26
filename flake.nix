@@ -8,6 +8,7 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    yt-x.url = "github:Benexl/yt-x";
   };
 
   outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, ... }@inputs:

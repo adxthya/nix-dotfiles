@@ -39,7 +39,7 @@
     }
   },
   "user": {
-    "format": "  adxthya | ({work_M} mins ↑)",
+    "format": "  adxthya | ({work_H}hr {work_M} mins ↑)",
     "interval": 60,
     "height": 23,
     "width": 23,
@@ -47,7 +47,6 @@
     "avatar": "/home/adxthya/.config/waybar/pfp-circle.png",
   },
   "tray": {
-    // "icon-size": 21,
     "spacing": 10
   },
   "clock": {
@@ -80,7 +79,9 @@
       "default": ["", "", ""]
     },
     "tooltip-format": "{volume}% volume",
-    "on-click": "pavucontrol",
+    "on-click": "$HOME/.config/scripts/volume.sh --toggle",
+    "on-scroll-up": "$HOME/.config/scripts/volume.sh --inc",
+    "on-scroll-down": "$HOME/.config/scripts/volume.sh --dec",
   },
   "custom/power": {
     "format": "󰐥",
@@ -101,7 +102,7 @@
     "path": "/home/adxthya/.config/waybar/nix.svg",
     "size": 20,
     "interval": 5,
-    "on-click": "firefox https://search.nixos.org/packages",
+    "on-click": "brave https://search.nixos.org/packages",
   },
 }
 }

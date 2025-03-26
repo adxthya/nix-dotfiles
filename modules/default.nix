@@ -6,6 +6,7 @@
     ./qt
     ./dunst
     ./rofi
+    ./direnv
   ];
 
 }

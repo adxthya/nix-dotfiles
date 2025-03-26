@@ -10,6 +10,7 @@
       home-build = "nh home switch ~/hypr-dotfiles";
       hypr-config = "nano ~/.config/hypr/hyprland.conf";
       ns = "nix-shell -p";
+      shellinit="echo 'use nix' > .envrc && direnv allow";
     };
   };
 
