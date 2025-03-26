@@ -1,0 +1,9 @@
+!/usr/bin/env bash
+
+dir="$HOME/.config/rofi/config/"
+theme='grid'
+
+rofi \
+    -modi "emoji:rofimoji --hidden-descriptions --selector-args='-kb-row-left Left -kb-row-right Right -kb-move-char-back Control+b -kb-move-char-forward Control+f' --max-recent 0" \
+    -show emoji \
+    -theme ${dir}/${theme}.rasi \

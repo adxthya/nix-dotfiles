@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+dir="$HOME/.config/rofi/config/"
+theme='main'
+
+rofi \
+    -show drun \
+    -theme ${dir}/${theme}.rasi
