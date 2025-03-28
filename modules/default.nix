@@ -7,6 +7,7 @@
     ./dunst
     ./rofi
     ./direnv
+    ./nvim
   ];
 
 }

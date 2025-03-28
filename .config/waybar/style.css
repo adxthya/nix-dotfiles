@@ -207,6 +207,7 @@ button {
 .modules-left {
     background-color: @crust;
     border-radius: 10px;
+    padding-right: 10px;
 }
 
 .modules-center {
@@ -219,6 +220,11 @@ button {
     background-color: @crust;
     border-radius: 10px;
     padding: 0 10px;
+}
+
+#custom-spotify {
+    color: #6fcf97;
+    padding-right: 10px;
 }
 
 /* vim: ft=sass */

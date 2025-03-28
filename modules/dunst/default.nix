@@ -22,6 +22,7 @@
         format = "<b>%s</b>\n%b";
         alignment = "center";
         icon_position = "off";
+      
         startup_notification = "false";
         corner_radius = 12;
 

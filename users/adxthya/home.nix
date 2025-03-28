@@ -17,6 +17,9 @@ in
   ];
 
   home.packages = with myPkgs;[
+    # Sync notes
+    syncthing    
+
     # Terminal Youtube ;)
     inputs.yt-x.packages."${system}".default
     
@@ -43,6 +46,7 @@ in
 
     # Audio
     pavucontrol
+    playerctl
     pamixer
 
     waybar

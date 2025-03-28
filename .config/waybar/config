@@ -3,7 +3,7 @@
   "height": 32,
   "spacing": 5,
   // Choose the order of the modules
-  "modules-left": ["image", "hyprland/workspaces"],
+  "modules-left": ["image", "hyprland/workspaces", "custom/spotify"],
   "modules-center": ["user"],
   "modules-right": [
     "tray",
@@ -104,6 +104,13 @@
     "interval": 5,
     "on-click": "brave https://search.nixos.org/packages",
   },
+  "custom/spotify": {
+        "interval": 1,
+        "return-type": "json",
+        "exec": "~/.config/scripts/music.sh",
+        "on-click": "playerctl play-pause",
+        "escape": true
+    },
 }
 }
 
