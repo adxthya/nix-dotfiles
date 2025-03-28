@@ -8,7 +8,7 @@ if [[ $class == "playing" ]]; then
   if [[ ${#info} > 40 ]]; then
     info=$(echo $info | cut -c1-40)"..."
   fi
-  text="󰝚 "$info" "$icon
+  text=$info" "$icon
 elif [[ $class == "paused" ]]; then
   info=$(playerctl metadata --player=ncspot --format '{{title}}' | sed -E 's/[-(].*//')
   if [[ ${#info} > 40 ]]; then
