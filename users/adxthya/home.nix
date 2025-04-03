@@ -1,11 +1,5 @@
 { config, pkgs, inputs, unstable, ... }:
 
-let
-  myPkgs = pkgs // {
-    spotube = pkgs.callPackage ../../modules/spotube/package.nix {};
-  };
-in
-
 {
   home.username = "adxthya";
   home.homeDirectory = "/home/adxthya";
@@ -16,13 +10,14 @@ in
     ../../modules
   ];
 
-  home.packages = with myPkgs;[
+  home.packages = with pkgs;[
+    # Ricing
+    fastfetch    
+    pywal    
+  
     # Sync notes
     syncthing    
 
-    # Terminal Youtube ;)
-    inputs.yt-x.packages."${system}".default
-    
     # Terminal Spotify ;) 
     ncspot   
 

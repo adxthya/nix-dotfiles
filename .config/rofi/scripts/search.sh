@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-dir="$HOME/.config/rofi/launchers/type-1"
-theme='style-5'
+dir="$HOME/.config/rofi/config"
+theme='search'
 
 query=$(rofi -dmenu -p "Search DuckDuckGo:" -theme ${dir}/${theme}.rasi)
 if [[ -n "$query" ]]; then
