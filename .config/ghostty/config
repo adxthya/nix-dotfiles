@@ -1,0 +1,6 @@
+font-family = Iosevka
+window-padding-x = 10
+window-padding-y = 10
+font-size = 13
+theme=catppuccin-mocha
+background-opacity = 0.8
