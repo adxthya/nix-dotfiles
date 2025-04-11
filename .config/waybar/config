@@ -44,7 +44,7 @@
     "height": 23,
     "width": 23,
     "icon": true,
-    "avatar": "/home/adxthya/.config/waybar/pfp-circle.png",
+    "avatar": "/home/adxthya/.config/waybar/pfp.jpeg",
   },
   "tray": {
     "spacing": 10

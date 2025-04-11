@@ -1,0 +1,55 @@
+* {
+    background-image: none;
+    transition: 0;
+    font-family: Iosevka, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+window {
+    background-color: rgba(12, 12, 12, 0.8);
+    /* background-image: url("./noise.png"); */
+}
+button {
+    color: #e5e0cf;
+    background-color: rgba(205, 237, 253, 0.15);
+    border: 0 solid #779cab;
+    border-radius: 4rem;
+    margin: 0.8rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    box-shadow:
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: Iosevka;
+    font-size: 1.7rem;
+}
+
+button:focus,
+button:active,
+button:hover {
+    background-color: rgba(9, 3, 2, 0.1);
+    outline-style: none;
+}
+
+#lock {
+    background-image: image(url("./images/lock.png"));
+}
+
+#logout {
+    background-image: image(url("./images/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("./images/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("./images/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("./images/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("./images/reboot.png"));
+}
