@@ -31,9 +31,9 @@
 
 * {
     font-family:
-        Iosevka,
+        GeistMono NFM,
         Symbols Nerd Font;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 14px;
 }
 
@@ -157,6 +157,7 @@ button {
 
 #pulseaudio {
     color: @mauve;
+    font-size: 25px;
 }
 
 #pulseaudio.muted {
@@ -202,6 +203,7 @@ button {
 
 #power-profiles-daemon {
     margin-right: 8px;
+    font-size: 18px;
 }
 
 .modules-left {
