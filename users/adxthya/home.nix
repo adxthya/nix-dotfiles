@@ -51,7 +51,7 @@
     pamixer
 
     waybar
-    vscode-fhs
+    vscodium-fhs
     seahorse
     libnotify
     power-profiles-daemon

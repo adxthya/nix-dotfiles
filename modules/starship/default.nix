@@ -6,14 +6,14 @@
       command_timeout = 500;
       continuation_prompt = "[∙](bright-black) ";
       format = ''
-        [░▒▓](#a3aed2)[  ](bg:#a3aed2 fg:#090c0c)[](bg:#769ff0 fg:#a3aed2)$directory[](fg:#769ff0 bg:#394260)$git_branch$git_status[](fg:#394260 bg:#212736)$nodejs$rust$golang$php$nix_shell[](fg:#212736 bg:#1d2230)$time[ ](fg:#1d2230)
+        [░▒▓](#a3aed2)[  ](bg:#a3aed2 fg:#090c0c)[](bg:#769ff0 fg:#a3aed2)$directory[](fg:#769ff0 bg:#394260)$git_branch$git_status[](fg:#394260 bg:#212736) $python$nodejs$rust$golang$php[](fg:#212736 bg:#1d2230)$nix_shell[ ](fg:#1d2230)
 
         [ ](bold blue) [adxthya](bold fg:#A0DDFF) [@](bold red) [hope ](bold green)
       '';
       right_format = "";
       scan_timeout = 30;
       directory = {
-        style = "fg:#e3e5e5 bg:#769ff0";
+        style = "fg:#F2FFE6 bold bg:#769ff0";
         format = "[ $path ]($style)";
         truncation_length = 3;
         truncation_symbol = "…/";
