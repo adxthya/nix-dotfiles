@@ -8,6 +8,7 @@
     enable = true;
     settings = {
       global = {
+	actions = true;
         origin = "top-right";
         offset = "60x12";
         separator_height = 2;

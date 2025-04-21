@@ -27,7 +27,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "IntelOneMono" "GeistMono" ]; })
+    (nerdfonts.override { fonts = [ "FiraCode" "IntelOneMono" "Hack" ]; })
     cantarell-fonts
     iosevka
   ];

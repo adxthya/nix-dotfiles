@@ -12,6 +12,9 @@
       ns = "nix-shell -p";
       shellinit="echo 'use nix' > .envrc && direnv allow";
     };
+    initExtra = ''
+      eval "$(starship init bash)"
+    '';
   };
 
 }

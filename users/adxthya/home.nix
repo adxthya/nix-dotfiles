@@ -11,6 +11,12 @@
   ];
 
   home.packages = with pkgs;[
+    # Virtualization
+    gnome-boxes
+
+    # Prompt
+    starship
+    
     # Ricing
     fastfetch    
     pywal    

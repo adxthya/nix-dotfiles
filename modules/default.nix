@@ -8,6 +8,7 @@
     ./rofi
     ./direnv
     ./nvim
+    ./starship
   ];
 
 }
