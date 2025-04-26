@@ -11,6 +11,9 @@
   ];
 
   home.packages = with pkgs;[
+    # Art
+    krita
+
     # Virtualization
     gnome-boxes
 
@@ -31,14 +34,19 @@
     xviewer	
     brave   
 
-    # Screenshots
+    # Screenshot and record utilities
     slurp
     grim
+    wf-recorder
 
-    #Notes
+    # Notes
     obsidian
 
+    # Media
     vlc
+
+    # Messaing
+    element-desktop
     vesktop
 
     # Wallpaper
@@ -50,13 +58,16 @@
     playerctl
     pamixer
 
+    # Utilities
+    zoxide
+
+
     waybar
     vscodium-fhs
     seahorse
     libnotify
     power-profiles-daemon
     fzf
-    unstable.freetube
     bitwarden
     zed-editor
     veracrypt
@@ -66,6 +77,7 @@
     obsidian            
   ];
   services.mpris-proxy.enable = true;
+  programs.zoxide.enable = true;
 
   home.file = {
   };

@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "height": 32,
+  "height": 37,
   "spacing": 5,
   // Choose the order of the modules
   "modules-left": ["image", "hyprland/workspaces", "custom/spotify"],

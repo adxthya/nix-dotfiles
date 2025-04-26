@@ -9,6 +9,7 @@
     ./direnv
     ./nvim
     ./starship
+    ./ghostty
   ];
 
 }
