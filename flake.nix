@@ -9,9 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     yt-x.url = "github:Benexl/yt-x";
+    nvf.url = "github:notashelf/nvf";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, nvf, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
@@ -30,7 +31,8 @@
           extraSpecialArgs = { inherit inputs; inherit unstable; };
           inherit pkgs;
           modules = [
-            ./users
+            nvf.homeManagerModules.default
+	    ./users
           ];
         };
       };

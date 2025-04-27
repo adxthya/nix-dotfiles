@@ -7,7 +7,7 @@
     ./dunst
     ./rofi
     ./direnv
-    ./nvim
+    ./nvf
     ./starship
     ./ghostty
   ];

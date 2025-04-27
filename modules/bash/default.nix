@@ -1,4 +1,4 @@
-{ pkgs, ... }:{
+{ ... }:{
 
   programs.bash = {
     enable = true;
@@ -11,6 +11,7 @@
       hypr-config = "cd ~/.config/hypr/";
       ns = "nix-shell -p";
       shellinit="echo 'use nix' > .envrc && direnv allow";
+      cd="z";
     };
     initExtra = ''
       eval "$(starship init bash)"

@@ -184,6 +184,12 @@ button {
   margin-right: 5px;
 }
 
+#bluetooth {
+  margin-right: 10px;
+  font-size: 17px;
+  color: white;
+}
+
 #keyboard-state > label {
   padding: 0 5px;
 }
