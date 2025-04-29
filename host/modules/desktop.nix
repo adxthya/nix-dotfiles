@@ -1,13 +1,14 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   services.xserver = {
     enable = true;
     xkb.layout = "us";
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
-    };
+  };
+
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    theme = "catppuccin-mocha";
+    package = pkgs.kdePackages.sddm;
   };
 
   programs.hyprland = {
@@ -28,7 +29,7 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
   environment.sessionVariables = {
