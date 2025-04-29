@@ -13,6 +13,7 @@
       cd = "z";
     };
     initExtra = ''
+      PATH="$PATH:$HOME/.config/scripts"
       eval "$(starship init bash)"
       eval "$(zoxide init bash)"
     '';

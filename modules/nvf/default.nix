@@ -69,9 +69,8 @@
           html.enable = true;
           ts.enable = true;
           css.enable = true;
+          python.enable = true;
           tailwind.enable = true;
-          html.treesitter.enable = true;
-          html.treesitter.autotagHtml = true;
         };
       };
     };

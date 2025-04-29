@@ -1,0 +1,65 @@
+#!/usr/bin/env nix-shell
+#! nix-shell -i bash -p wget imagemagick file
+
+# Now normal bash script begins...
+
+clear
+
+echo "
+ ▄     ▄ ▄▄▄▄▄▄ ▄▄▄     ▄▄▄     ▄▄▄▄▄▄▄ ▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄   
+█ █ ▄ █ █      █   █   █   █   █       █      █       █       █   ▄  █  
+█ ██ ██ █  ▄   █   █   █   █   █    ▄  █  ▄   █    ▄  █    ▄▄▄█  █ █ █  
+█       █ █▄█  █   █   █   █   █   █▄█ █ █▄█  █   █▄█ █   █▄▄▄█   █▄▄█▄ 
+█       █      █   █▄▄▄█   █▄▄▄█    ▄▄▄█      █    ▄▄▄█    ▄▄▄█    ▄▄  █
+█   ▄   █  ▄   █       █       █   █   █  ▄   █   █   █   █▄▄▄█   █  █ █
+█▄▄█ █▄▄█▄█ █▄▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█▄▄▄█   █▄█ █▄▄█▄▄▄█   █▄▄▄▄▄▄▄█▄▄▄█  █▄█
+
+"
+
+# Prompt for URL
+read -p "Enter image URL: " url
+
+# Prompt for output filename (without extension)
+read -p "Enter output filename (without extension): " filename
+
+# Temporary filename
+temp_file="downloaded_image"
+
+# Download the image
+wget -O "$temp_file" "$url"
+
+# Check if download was successful
+if [ $? -ne 0 ]; then
+    echo "Failed to download the image."
+    exit 1
+fi
+
+# Detect the file type using 'file' command
+file_type=$(file --mime-type -b "$temp_file")
+
+# Set extension based on MIME type
+case "$file_type" in
+    image/jpeg) ext="jpg" ;;
+    image/png)  ext="png" ;;
+    image/webp) ext="webp" ;;
+    image/gif)  ext="gif" ;;
+    image/bmp)  ext="bmp" ;;
+    image/tiff) ext="tiff" ;;
+    *) 
+        echo "Unknown or unsupported image type: $file_type"
+        rm "$temp_file"
+        exit 1
+        ;;
+esac
+
+# Final output filename
+output_file="${filename}.${ext}"
+
+# Resize the image to 1920x1080
+convert "$temp_file" -resize 1920x1080\! "$output_file"
+
+# Clean up temporary file
+rm "$temp_file"
+
+echo "Image saved as $output_file with 1920x1080 resolution."
+
