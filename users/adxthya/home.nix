@@ -1,6 +1,10 @@
-{ config, pkgs, inputs, unstable, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  unstable,
+  ...
+}: {
   home.username = "adxthya";
   home.homeDirectory = "/home/adxthya";
 
@@ -10,7 +14,7 @@
     ../../modules
   ];
 
-  home.packages = with pkgs;[
+  home.packages = with pkgs; [
     # Art
     krita
 
@@ -19,20 +23,20 @@
 
     # Prompt
     starship
-    
-    # Ricing
-    fastfetch    
-    pywal    
-  
-    # Sync notes
-    syncthing    
 
-    # Terminal Spotify ;) 
-    ncspot   
+    # Ricing
+    fastfetch
+    pywal
+
+    # Sync notes
+    syncthing
+
+    # Terminal Spotify ;)
+    ncspot
 
     stow
-    xviewer	
-    brave   
+    xviewer
+    brave
 
     # Screenshot and record utilities
     slurp
@@ -46,8 +50,8 @@
     vlc
 
     # Messaing
-    element-desktop
     vesktop
+    signal-desktop
 
     # Wallpaper
     swww
@@ -61,7 +65,6 @@
     # Utilities
     zoxide
 
-
     waybar
     vscodium-fhs
     seahorse
@@ -74,7 +77,7 @@
     telegram-desktop
     protonvpn-gui
     ghostty
-    obsidian            
+    obsidian
   ];
   services.mpris-proxy.enable = true;
   programs.zoxide.enable = true;

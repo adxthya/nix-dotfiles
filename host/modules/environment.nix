@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     pavucontrol
     git
@@ -27,8 +25,18 @@
     flake = "/home/adxthya/hypr-dotfiles";
   };
 
-  services.devmon.enable = true;
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
-  services.power-profiles-daemon.enable = true;
+  programs.thunar = {
+    enable = true;
+    plugins = with pkgs.xfce; [
+      thunar-archive-plugin
+      thunar-media-tags-plugin
+      thunar-volman
+    ];
+  };
+  services = {
+    devmon.enable = true;
+    gvfs.enable = true;
+    udisks2.enable = true;
+    power-profiles-daemon.enable = true;
+  };
 }

@@ -1,5 +1,4 @@
-{ pkgs, ... }: {
-
+{pkgs, ...}: {
   imports = [
     ./bash
     ./gtk
@@ -11,5 +10,4 @@
     ./starship
     ./ghostty
   ];
-
 }

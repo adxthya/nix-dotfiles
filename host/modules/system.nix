@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
@@ -24,10 +22,13 @@
     };
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    settings.experimental-features = ["nix-command" "flakes"];
+    settings.auto-optimise-store = true;
+  };
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "IntelOneMono" "Hack" ]; })
+    (nerdfonts.override {fonts = ["FiraCode" "IntelOneMono" "Hack"];})
     cantarell-fonts
     iosevka
   ];
