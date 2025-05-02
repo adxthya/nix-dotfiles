@@ -15,6 +15,9 @@
   ];
 
   home.packages = with pkgs; [
+    # Clipboard
+    wl-clipboard
+
     # Art
     krita
 

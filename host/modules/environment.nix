@@ -27,6 +27,13 @@
     )
   ];
 
+  # enable nix-ld for pip and friends
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc.lib
+    zlib # numpy
+  ];
+
   programs.nh = {
     enable = true;
     clean.enable = true;
@@ -47,5 +54,6 @@
     gvfs.enable = true;
     udisks2.enable = true;
     power-profiles-daemon.enable = true;
+    tumbler.enable = true;
   };
 }

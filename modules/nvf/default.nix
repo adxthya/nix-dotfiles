@@ -70,6 +70,8 @@
           ts.enable = true;
           css.enable = true;
           python.enable = true;
+          python.lsp.server = "pyright";
+          python.format.type = "black-and-isort";
           tailwind.enable = true;
         };
       };
