@@ -46,8 +46,7 @@
   };
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["FiraCode" "IntelOneMono" "Hack"];})
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
     cantarell-fonts
-    iosevka
   ];
 }

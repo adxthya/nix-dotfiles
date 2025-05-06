@@ -11,6 +11,7 @@
       ns = "nix-shell -p";
       shellinit = "echo 'use nix' > .envrc && direnv allow";
       cd = "z";
+      v = "nvim";
     };
     initExtra = ''
       PATH="$PATH:$HOME/.config/scripts"

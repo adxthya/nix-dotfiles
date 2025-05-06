@@ -6,9 +6,8 @@
       command_timeout = 500;
       continuation_prompt = "[∙](bright-black) ";
       format = ''
-        [┌─>](bold green) [](bold white) [$directory](bold cyan)$git_branch$nodejs$python$nix_shell
-        [│](bold green)
-        [└─>](bold green) [ ](bold blue) [adxthya](bold fg:#A0DDFF) [@](bold red) [hope ](bold green)
+        [$directory](bold cyan)$git_branch$nodejs$python$nix_shell
+        [ ](bold blue)
       '';
       right_format = "";
       scan_timeout = 30;

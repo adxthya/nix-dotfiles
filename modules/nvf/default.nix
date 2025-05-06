@@ -39,12 +39,10 @@
 
         ui = {
           borders.enable = true;
-          noice.enable = true;
-          colorizer.enable = true;
-          illuminate.enable = true;
         };
 
         lsp = {
+          enable = true;
           formatOnSave = true;
           lspSignature.enable = true;
         };
@@ -62,7 +60,6 @@
         formatter.conform-nvim.enable = true;
         languages = {
           enableFormat = true;
-          enableLSP = true;
           enableTreesitter = true;
           enableExtraDiagnostics = true;
           nix.enable = true;

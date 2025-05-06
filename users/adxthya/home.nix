@@ -18,9 +18,6 @@
     # Clipboard
     wl-clipboard
 
-    # Art
-    krita
-
     # Virtualization
     gnome-boxes
 
