@@ -1,7 +1,5 @@
 {
-  config,
   pkgs,
-  inputs,
   unstable,
   ...
 }: {
@@ -77,11 +75,11 @@
     telegram-desktop
     protonvpn-gui
     ghostty
-    obsidian
+    unstable.neovim
   ];
   services.mpris-proxy.enable = true;
   programs.zoxide.enable = true;
-
+  services.easyeffects.enable = true;
   home.file = {
   };
 

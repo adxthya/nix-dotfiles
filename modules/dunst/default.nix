@@ -1,5 +1,4 @@
-{ pkgs, lib, config, ... }:
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     dunst
   ];
@@ -8,26 +7,26 @@
     enable = true;
     settings = {
       global = {
-	actions = true;
+        actions = true;
         origin = "top-right";
         offset = "60x12";
         separator_height = 2;
         padding = 12;
         horizontal_padding = 12;
         text_icon_padding = 12;
-        frame_width = 4;
+        frame_width = 1;
         separator_color = "frame";
         idle_threshold = 120;
-        font = "IntoneMono NF Medium 10";
+        font = "JetBrainsMono NF 10";
         line_height = 0;
         format = "<b>%s</b>\n%b";
         alignment = "center";
         icon_position = "off";
-      
+
         startup_notification = "false";
         corner_radius = 12;
 
-        frame_color = "#44465c";
+        frame_color = "#4DFFE1";
         background = "#303241";
         foreground = "#d9e0ee";
         timeout = 2;

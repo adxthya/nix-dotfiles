@@ -7,7 +7,7 @@
       continuation_prompt = "[∙](bright-black) ";
       format = ''
         [$directory](bold cyan)$git_branch$nodejs$python$nix_shell
-        [ ](bold blue)
+        [  ](bold blue)
       '';
       right_format = "";
       scan_timeout = 30;
@@ -17,6 +17,10 @@
         pure_msg = "[pure shell](bold green)";
         unknown_msg = "[unknown shell](bold yellow)";
         format = "in [󱄅 $state](bold blue) ";
+      };
+
+      directory = {
+        home_symbol = " home/adxthya";
       };
     };
   };

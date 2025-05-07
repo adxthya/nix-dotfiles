@@ -1,10 +1,12 @@
-{...}: {
+{unstable, ...}: {
   programs.nvf = {
     enable = true;
     # your settings need to go into the settings attribute set
     # most settings are documented in the appendix
     settings = {
       vim = {
+        package = unstable.neovim-unwrapped;
+
         options = {
           tabstop = 2;
           shiftwidth = 2;
@@ -39,6 +41,7 @@
 
         ui = {
           borders.enable = true;
+          colorizer.enable = true;
         };
 
         lsp = {
