@@ -79,6 +79,7 @@
   ];
   services.mpris-proxy.enable = true;
   programs.zoxide.enable = true;
+  programs.fish.enable = true;
   services.easyeffects.enable = true;
   home.file = {
   };

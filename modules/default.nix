@@ -9,5 +9,6 @@
     ./nvf
     ./starship
     ./ghostty
+    ./fish
   ];
 }

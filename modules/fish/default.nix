@@ -1,5 +1,5 @@
-{pkgs, ...}: {
-  programs.bash = {
+{...}: {
+  programs.fish = {
     enable = true;
     shellAliases = {
       c = "clear";
@@ -13,10 +13,8 @@
       cd = "z";
       v = "nvim";
     };
-    initExtra = ''
-      PATH="$PATH:$HOME/.config/scripts"
-      eval "$(starship init bash)"
-      eval "$(zoxide init bash)"
+    interactiveShellInit = ''
+      set fish_greeting # Disable greeting
     '';
   };
 }

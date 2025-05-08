@@ -12,6 +12,21 @@
           shiftwidth = 2;
         };
 
+        spellcheck = {
+          enable = true;
+        };
+
+        comments = {
+          comment-nvim.enable = true;
+        };
+
+        terminal = {
+          toggleterm = {
+            enable = true;
+            lazygit.enable = true;
+          };
+        };
+
         viAlias = false;
         vimAlias = true;
         theme = {
@@ -73,6 +88,7 @@
           python.lsp.server = "pyright";
           python.format.type = "black-and-isort";
           tailwind.enable = true;
+          rust.enable = true;
         };
       };
     };
