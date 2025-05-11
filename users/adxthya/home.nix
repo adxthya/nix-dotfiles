@@ -13,69 +13,73 @@
   ];
 
   home.packages = with pkgs; [
-    # Clipboard
+    # 📋 Clipboard Management
     wl-clipboard
 
-    # Virtualization
+    # 💻 Virtualization
     gnome-boxes
 
-    # Prompt
+    # 🧠 Prompt / Shell
     starship
 
-    # Ricing
+    # 🎨 Ricing / Theming
     fastfetch
     pywal
+    waypaper
+    swww
+    waybar
 
-    # Sync notes
-    syncthing
+    # 🔄 Sync & Notes
+    syncthing # Sync
+    obsidian # Notes
 
-    # Terminal Spotify ;)
+    # 🎵 Terminal Music
     ncspot
 
+    # 🧰 CLI Tools & Utilities
     stow
-    xviewer
+    zoxide
+    fzf
+
+    # 🌐 Network
+    qbittorrent-enhanced
     brave
 
-    # Screenshot and record utilities
+    # 📸 Screenshots & Screen Recording
     slurp
     grim
     wf-recorder
 
-    # Notes
-    obsidian
-
-    # Media
+    # 📺 Media Player
     vlc
 
-    # Messaing
+    # 💬 Messaging / Communication
     vesktop
     signal-desktop
+    telegram-desktop
 
-    # Wallpaper
-    swww
-    waypaper
-
-    # Audio
+    # 🔊 Audio Management
     pavucontrol
     playerctl
     pamixer
 
-    # Utilities
-    zoxide
+    # 🔐 Security & Privacy
+    seahorse # GPG Keyring Manager
+    bitwarden # Password Manager
+    veracrypt # Disk Encryption
+    protonvpn-gui # VPN GUI
 
-    waybar
-    vscodium-fhs
-    seahorse
+    # 🔔 Notifications
     libnotify
+
+    # 🔋 Power Management
     power-profiles-daemon
-    fzf
-    bitwarden
+
+    # 🖥 Editors & IDEs
+    vscodium-fhs
     zed-editor
-    veracrypt
-    telegram-desktop
-    protonvpn-gui
-    ghostty
     unstable.neovim
+    ghostty # Terminal emulator
   ];
   services.mpris-proxy.enable = true;
   programs.zoxide.enable = true;
