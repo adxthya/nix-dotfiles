@@ -50,8 +50,9 @@
     grim
     wf-recorder
 
-    # 📺 Media Player
+    # 📺 Media
     vlc
+    xviewer
 
     # 💬 Messaging / Communication
     vesktop
@@ -80,6 +81,12 @@
     zed-editor
     unstable.neovim
     ghostty # Terminal emulator
+
+    # 📚 Books
+    foliate
+
+    # 🎮 Games
+    bottles
   ];
   services.mpris-proxy.enable = true;
   programs.zoxide.enable = true;
