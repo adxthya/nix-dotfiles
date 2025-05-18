@@ -1,4 +1,6 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  electroHarmonix = pkgs.callPackage ./sddm/font.nix {};
+in {
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
@@ -48,5 +50,6 @@
   fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
     cantarell-fonts
+    electroHarmonix
   ];
 }

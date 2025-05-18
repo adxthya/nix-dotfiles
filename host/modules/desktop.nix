@@ -7,8 +7,12 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "catppuccin-mocha";
+    theme = "sddm-astronaut-theme";
     package = pkgs.kdePackages.sddm;
+    extraPackages = [
+      pkgs.kdePackages.qt5compat
+      pkgs.kdePackages.qtmultimedia
+    ];
   };
 
   programs.hyprland = {

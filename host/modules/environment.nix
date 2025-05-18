@@ -17,12 +17,8 @@
     hyprlock
     power-profiles-daemon
     (
-      pkgs.catppuccin-sddm.override {
-        flavor = "mocha";
-        font = "Noto Sans";
-        fontSize = "9";
-        background = "${../../wallpapers/perfectblue.png}";
-        loginBackground = true;
+      callPackage ./sddm/sddm.nix {
+        configFileOverride = "Themes/japanese_aesthetic.conf";
       }
     )
   ];

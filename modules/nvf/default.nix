@@ -12,10 +12,6 @@
           shiftwidth = 2;
         };
 
-        spellcheck = {
-          enable = true;
-        };
-
         comments = {
           comment-nvim.enable = true;
         };
