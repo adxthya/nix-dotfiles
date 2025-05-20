@@ -8,11 +8,6 @@ in {
   };
 
   boot = {
-    plymouth = {
-      enable = true;
-      theme = "bgrt";
-    };
-
     # Enable "Silent boot"
     consoleLogLevel = 3;
     initrd.verbose = false;

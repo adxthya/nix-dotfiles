@@ -13,6 +13,9 @@
   ];
 
   home.packages = with pkgs; [
+    # Fetch
+    fastfetch
+
     # 📋 Clipboard Management
     wl-clipboard
 
@@ -55,7 +58,6 @@
     xviewer
 
     # 💬 Messaging / Communication
-    vesktop
     signal-desktop
     telegram-desktop
 
@@ -85,8 +87,8 @@
     # 📚 Books
     foliate
 
-    # 🎮 Games
-    bottles
+    # Share
+    localsend
   ];
   services.mpris-proxy.enable = true;
   programs.zoxide.enable = true;

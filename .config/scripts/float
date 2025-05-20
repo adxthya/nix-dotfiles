@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Ensure hyprctl is available in your environment
+command -v hyprctl >/dev/null 2>&1 || {
+    echo "hyprctl not found in PATH"
+    exit 1
+}
+
+# Toggle floating
+hyprctl dispatch togglefloating
+
+# Wait for the window state to update
+sleep 0.05
+
+# Resize and center the currently focused window
+hyprctl dispatch resizeactive exact 800 600
+hyprctl dispatch centerwindow
+

@@ -2,8 +2,8 @@
   networking = {
     hostName = "hope";
     networkmanager.enable = true;
-    firewall.allowedTCPPorts = [5500 3000];
-    firewall.allowedUDPPorts = [5500 3000];
+    firewall.allowedTCPPorts = [3000 53317];
+    firewall.allowedUDPPorts = [3000 53317];
   };
 
   services.openssh = {
