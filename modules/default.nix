@@ -3,7 +3,6 @@
     ./bash
     ./gtk
     ./qt
-    ./dunst
     ./rofi
     ./direnv
     ./nvf

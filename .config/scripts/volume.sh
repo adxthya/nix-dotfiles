@@ -25,7 +25,7 @@ get_icon() {
 # Notify
 notify_user() {
 #	notify-send -h string:x-canonical-private-synchronous:sys-notify -u normal -i "$(get_icon)" "Volume : $(get_volume) %"
-	notify-send -h int:value:$(get_volume) -h "string:x-dunst-stack-tag:volume_notif" -u low -i "$(get_icon)" "Volume : $(get_volume) %"
+	notify-send -h int:value:$(get_volume) -h "string:x-canonical-private-synchronous:volume" -u low -i "$(get_icon)" "Volume : $(get_volume) %"
 
 }
 

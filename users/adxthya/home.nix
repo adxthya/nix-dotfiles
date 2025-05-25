@@ -74,13 +74,12 @@
 
     # 🔔 Notifications
     libnotify
+    swaynotificationcenter
 
     # 🔋 Power Management
     power-profiles-daemon
 
     # 🖥 Editors & IDEs
-    vscodium-fhs
-    zed-editor
     unstable.neovim
     ghostty # Terminal emulator
 

@@ -4,11 +4,10 @@
     git
     nh
     gh
-    xfce.thunar
     networkmanagerapplet
     bluez
     glibc
-    lxqt.lxqt-policykit
+    polkit_gnome
     glib
     gparted
     brightnessctl
