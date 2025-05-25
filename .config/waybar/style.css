@@ -180,7 +180,6 @@ button {
 
 #custom-power {
   color: @maroon;
-  margin-right: 5px;
 }
 
 #bluetooth {
@@ -203,10 +202,6 @@ button {
 
 #scratchpad.empty {
   background-color: transparent;
-}
-
-#power-profiles-daemon {
-  margin-right: 8px;
 }
 
 .modules-left {
