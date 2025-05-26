@@ -9,5 +9,6 @@
     ./starship
     ./ghostty
     ./fish
+    ./swaync
   ];
 }

@@ -22,6 +22,8 @@ in {
 
   time.timeZone = "Asia/Kolkata";
 
+  services.preload.enable = true;
+
   i18n = {
     defaultLocale = "en_IN";
     extraLocaleSettings = {
@@ -46,5 +48,6 @@ in {
     nerd-fonts.jetbrains-mono
     cantarell-fonts
     electroHarmonix
+    noto-fonts-color-emoji
   ];
 }
