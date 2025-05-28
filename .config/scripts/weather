@@ -1,6 +1,2 @@
 #!/usr/bin/env bash
-
-while true; do
-  curl -s wttr.in/thrissur?format=1
-  sleep 3600
-done
+curl -s wttr.in/thrissur?format="%t+%C"

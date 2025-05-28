@@ -3,7 +3,7 @@
   "height": 37,
   "spacing": 5,
   // Choose the order of the modules
-  "modules-left": ["image", "hyprland/workspaces", "custom/spotify"],
+  "modules-left": ["image", "hyprland/workspaces", "custom/weather", "custom/spotify"],
   "modules-center": ["user"],
   "modules-right": [
     "tray",
@@ -142,7 +142,14 @@
     "on-click": "sleep 0.1 && swaync-client -t -sw",
     "on-click-right": "sleep 0.1 && swaync-client -d -sw",
     "escape": true
-  }
+  },
+  "custom/weather": {
+  "exec": "~/.config/scripts/weather",
+  "interval": 3600,
+  "format": "{}",
+  "return-type": "text"
+}
+
 }
 }
 
