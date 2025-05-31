@@ -81,9 +81,9 @@
       "default": ["", "", ""]
     },
     "tooltip-format": "{volume}% volume",
-    "on-click": "$HOME/.config/scripts/volume.sh --toggle",
-    "on-scroll-up": "$HOME/.config/scripts/volume.sh --inc",
-    "on-scroll-down": "$HOME/.config/scripts/volume.sh --dec",
+    "on-click": "$HOME/.config/scripts/volume --toggle",
+    "on-scroll-up": "$HOME/.config/scripts/volume --inc",
+    "on-scroll-down": "$HOME/.config/scripts/volume --dec",
   },
   "custom/power": {
     "format": "󰐥",
@@ -119,7 +119,7 @@
   "custom/spotify": {
         "interval": 1,
         "return-type": "json",
-        "exec": "~/.config/scripts/music.sh",
+        "exec": "~/.config/scripts/music",
         "on-click": "playerctl play-pause",
         "escape": true
   },

@@ -114,7 +114,8 @@ button {
 #disk,
 #temperature,
 #backlight,
-#network,
+#network.wifi,
+#network.disconnected,
 #wireplumber,
 #custom-pacman,
 #custom-power,
@@ -129,8 +130,14 @@ button {
   margin: 5px 0;
 }
 
+#power-profiles-daemon.balanced,
+#power-profiles-daemon.power-saver {
+  margin-right: 7px;
+}
+
 #pulseaudio {
-  padding: 0 10px;
+  padding-right: 10px;
+  padding-left: 8px;
   color: @text;
   border-radius: 15px;
   margin: 5px 0;
@@ -168,6 +175,11 @@ button {
 
 #network.disconnected {
   color: @surface2;
+}
+
+#network.ethernet {
+  margin-right: 8px;
+  margin-left: 0px;
 }
 
 #battery {
