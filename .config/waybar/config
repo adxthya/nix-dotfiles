@@ -3,7 +3,7 @@
   "height": 37,
   "spacing": 5,
   // Choose the order of the modules
-  "modules-left": ["image", "hyprland/workspaces", "custom/weather", "custom/spotify"],
+  "modules-left": ["image", "hyprland/workspaces", "custom/spotify"],
   "modules-center": ["user"],
   "modules-right": [
     "tray",
@@ -23,11 +23,11 @@
     "format": "{icon}",
     "on-click": "activate",
     "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
+      "1": "󰌽",
+      "2": "󰮯",
+      "3": "",
+      "4": "",
+      "5": "󰣇",
       "urgent": "",
       "active": "",
       "default": ""

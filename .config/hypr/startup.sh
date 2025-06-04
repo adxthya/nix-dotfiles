@@ -2,7 +2,6 @@
 
 sleep 2
 exec waybar &
-exec hyprctl setcursor BreezeX-RosePineDawn-Linux 24 &
 exec blueman-applet &
 exec swww-daemon &
 exec nm-applet &

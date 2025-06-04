@@ -15,11 +15,10 @@
     wlogout
     hyprlock
     power-profiles-daemon
-    (
-      callPackage ./sddm/sddm.nix {
-        configFileOverride = "Themes/japanese_aesthetic.conf";
-      }
-    )
+    (sddm-astronaut.override
+      {
+        embeddedTheme = "japanese_aesthetic";
+      })
   ];
 
   # enable nix-ld for pip and friends

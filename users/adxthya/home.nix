@@ -13,6 +13,11 @@
   ];
 
   home.packages = with pkgs; [
+    # Games
+    (bottles.override {
+      removeWarningPopup = true;
+    })
+
     # Fetch
     fastfetch
 
@@ -35,9 +40,6 @@
     # 🔄 Sync & Notes
     syncthing # Sync
     obsidian # Notes
-
-    # 🎵 Terminal Music
-    ncspot
 
     # 🧰 CLI Tools & Utilities
     stow

@@ -12,6 +12,9 @@
       shellinit = "echo 'use nix' > .envrc && direnv allow";
       cd = "z";
       v = "nvim";
+      ncspot = "flatpak run io.github.hrkfdn.ncspot";
+      gs = "git status";
+      gc = "git commit -S -m";
     };
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
