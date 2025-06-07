@@ -13,6 +13,18 @@
   ];
 
   home.packages = with pkgs; [
+    # Design
+    penpot-desktop
+
+    # Mime Apps
+    selectdefaultapplication
+
+    # Thunar Archive Manager
+    xarchiver
+
+    # Coding
+    vscodium-fhs
+
     # Games
     (bottles.override {
       removeWarningPopup = true;

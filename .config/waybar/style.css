@@ -84,6 +84,10 @@ button {
   border: @crust;
 }
 
+#workspaces button.empty {
+  color: #44475a
+}
+
 #workspaces button {
   padding: 0 5px;
   color: @surface2;

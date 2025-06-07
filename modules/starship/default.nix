@@ -20,7 +20,7 @@
       };
 
       directory = {
-        home_symbol = " home/adxthya";
+        home_symbol = " home/adxthya";
       };
     };
   };
