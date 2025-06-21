@@ -19,6 +19,7 @@
       {
         embeddedTheme = "japanese_aesthetic";
       })
+    nemo-with-extensions
   ];
 
   # enable nix-ld for pip and friends
@@ -33,15 +34,6 @@
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
     flake = "/home/adxthya/hypr-dotfiles";
-  };
-
-  programs.thunar = {
-    enable = true;
-    plugins = with pkgs.xfce; [
-      thunar-archive-plugin
-      thunar-media-tags-plugin
-      thunar-volman
-    ];
   };
 
   programs.bash = {

@@ -5,12 +5,12 @@
     firewall.allowedTCPPorts = [
       3000 # For web dev
       53317 # For localsend
-      19132 # For Minecraft
+      8081
     ];
     firewall.allowedUDPPorts = [
       3000
       53317
-      19132
+      8081
     ];
   };
 

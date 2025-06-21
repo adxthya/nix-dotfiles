@@ -13,6 +13,9 @@
   ];
 
   home.packages = with pkgs; [
+    # VPN
+    protonvpn-gui
+
     # Design
     penpot-desktop
 
@@ -84,7 +87,6 @@
     seahorse # GPG Keyring Manager
     bitwarden # Password Manager
     veracrypt # Disk Encryption
-    protonvpn-gui # VPN GUI
 
     # 🔔 Notifications
     libnotify
@@ -95,7 +97,10 @@
 
     # 🖥 Editors & IDEs
     unstable.neovim
-    ghostty # Terminal emulator
+    xed-editor
+
+    # Terminal emulator
+    ghostty
 
     # 📚 Books
     foliate

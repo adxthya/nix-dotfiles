@@ -5,8 +5,6 @@
     # most settings are documented in the appendix
     settings = {
       vim = {
-        package = unstable.neovim-unwrapped;
-
         options = {
           tabstop = 2;
           shiftwidth = 2;
@@ -79,12 +77,17 @@
           nix.enable = true;
           html.enable = true;
           ts.enable = true;
+          ts.format.type = "prettierd";
           css.enable = true;
-          python.enable = true;
-          python.lsp.server = "pyright";
-          python.format.type = "black-and-isort";
+          css.format.type = "prettierd";
+          python = {
+            enable = true;
+            lsp.server = "pyright";
+            format.type = "black-and-isort";
+          };
           tailwind.enable = true;
           rust.enable = true;
+          java.enable = true;
         };
       };
     };
