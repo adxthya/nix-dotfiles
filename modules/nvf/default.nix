@@ -88,6 +88,8 @@
           tailwind.enable = true;
           rust.enable = true;
           java.enable = true;
+          svelte.enable = true;
+          svelte.format.type = "biome";
         };
       };
     };

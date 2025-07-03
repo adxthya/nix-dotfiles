@@ -6,11 +6,13 @@
       3000 # For web dev
       53317 # For localsend
       8081
+      5000 # Python arduino server
     ];
     firewall.allowedUDPPorts = [
       3000
       53317
       8081
+      5000 # Python arduino server
     ];
   };
 

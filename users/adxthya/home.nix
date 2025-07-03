@@ -13,6 +13,11 @@
   ];
 
   home.packages = with pkgs; [
+    # MISC
+    wf-recorder
+    arduino-ide
+    python311
+
     # VPN
     protonvpn-gui
 
@@ -27,6 +32,7 @@
 
     # Coding
     vscodium-fhs
+    zed-editor
 
     # Games
     (bottles.override {

@@ -27,6 +27,7 @@
   programs.nix-ld.libraries = with pkgs; [
     stdenv.cc.cc.lib
     zlib # numpy
+    portaudio
   ];
 
   programs.nh = {
